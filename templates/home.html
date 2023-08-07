@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<h3>{{today}} <img src="{% static 'img/location.png' %}" height="30" width="30"> Toshkent </h3>
+
+<h1><img src="{% static 'img/prayer-rug.png' %}" height="40" width="50">Prayer Times</h1>
+<table>
+  <tr>
+    <td><b>Bomdod</b></td>
+    <td><b>Peshin</b></td>
+    <td><b>Asr</b></td>
+    <td class="active"><b>Shom</b></td>
+    <td><b>Xufton</b></td>
+  </tr>
+  <tr>
+  
+    <td>{{bomdod}}</td>
+  
+    <td>{{peshin}}</td>
+    <td>{{asr}}</td>
+    <td class="active">{{shom}}</td>
+    <td>{{hufton}}</td>
+  </tr>
+</table>
+{% include 'footer.html' %}
+{% endblock %}
